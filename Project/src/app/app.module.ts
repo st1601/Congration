@@ -22,6 +22,9 @@ import { MainaComponent } from './components/admin/maina/maina.component';
 import { MaincComponent } from './components/customer/mainc/mainc.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
+import { NavbartComponent } from './components/actor/navbart/navbart.component';
+import { NavbaraComponent } from './components/admin/navbara/navbara.component';
+import { NavbarcComponent } from './components/customer/navbarc/navbarc.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,10 @@ import { HomeComponent } from './components/home/home.component';
     MaintComponent,
     MainaComponent,
     MaincComponent,
-    HomeComponent
+    HomeComponent,
+    NavbartComponent,
+    NavbaraComponent,
+    NavbarcComponent
   ],
   imports: [
     BrowserModule,
@@ -75,6 +81,18 @@ import { HomeComponent } from './components/home/home.component';
       {
         path: 'home',
         component: HomeComponent,
+      },
+      {
+        path: 'customer',
+        component: MaincComponent,
+      },
+      {
+        path: 'admin',
+        component: MainaComponent,
+      },
+      {
+        path: 'actor',
+        component: MaintComponent,
       },
     ]),
     NgbModule
