@@ -21,6 +21,7 @@ import { MaintComponent } from './components/actor/maint/maint.component';
 import { MainaComponent } from './components/admin/maina/maina.component';
 import { MaincComponent } from './components/customer/mainc/mainc.component';
 import { RouterModule } from '@angular/router';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { RouterModule } from '@angular/router';
     PostComponent,
     MaintComponent,
     MainaComponent,
-    MaincComponent
+    MaincComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -61,6 +63,18 @@ import { RouterModule } from '@angular/router';
       {
         path: 'maina',
         component: MainaComponent,
+      },
+      {
+        path: 'register',
+        component: RegisterComponent,
+      },
+      {
+        path: 'reset',
+        component: PasswordComponent,
+      },
+      {
+        path: 'home',
+        component: HomeComponent,
       },
     ]),
     NgbModule

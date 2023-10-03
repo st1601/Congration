@@ -1,34 +1,11 @@
 
-  	@keyframes rotate_in{
 
-        0%{
-            opacity: 0;
-            transform: rotate(30deg) scale(1.5);
-        }
-        100%{
-            opacity: 1;
-            transform: rotate(0deg) scale(1);
-        }
-    }
 
-    @keyframes move_in{
-
-        0%{
-            opacity: 0;
-            transform: translateY(100px);
-        }
-        100%{
-            opacity: 1;
-            transform: translateY(0px);
-        }
-    }
-
-    body{
+    .body{
         background-color: #0b1828;
-        min-width: 350px;
     }
 
-    body a{
+    .body a{
         text-decoration: none;
     }
 
@@ -98,33 +75,9 @@
     }
 
     .content{
-        height: 600px;
+        height: 100%;
         width: 100%;
-        max-width: 900px
-    }
-
-    .fx-animate-1{
-        animation: move_in 0.4s ease;
-    }
-
-    .fx-animate-2{
-        animation: move_in 0.8s ease;
-    }
-
-    .fx-animate-3{
-        animation: move_in 1.2s ease;
-    }
-
-    .fx-animate-4{
-        animation: move_in 1.6s ease;
-    }
-
-    .fx-animate-5{
-        animation: move_in 2s ease;
-    }
-
-    .fx-animate-6{
-        animation: move_in 2.4s ease;
+        max-width: 1020px
     }
 
     form{
@@ -136,28 +89,3 @@
         display: none;
     }
 
-    @media (max-width: 767px){
-
-        .login-button{
-
-            left:100px;
-            top:-30px;
-
-        }
-
-        .signup-button{
-
-            left:190px;
-            top:-30px;
-
-        }
-
-        .img-container::after{
-
-            display: none;
-        }
-
-        .content{
-            height: 300px;
-        }
-    }
