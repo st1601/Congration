@@ -1,70 +1,54 @@
-<div class="d-flex">
-  <div class="container">
-    <div class="text-center">
-      <div class="site-logo">
-        <a class="justify-content-center" routerLink="/">
-          <img src="assets/img/zyro-image.png" alt="" style="width: 100px" />
-        </a>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="container-fluid">
+          <a class="navbar-brand" href=""><h2 class="text-warning"><img src="assets/img/logo.jpg" alt="" style="width: 100px" /></h2></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mob-navbar" aria-label="Toggle">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mob-navbar">
+              <ul class="navbar-nav mb-2 mb-lg-0 mx-auto">
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="maina">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Contact Us</a>
+                  </li>
+              </ul>
+              <form class="d-flex">
+                  <div ngbDropdown class="d-inline-block">
+                    <button
+                      style="
+                        background-color: rgb(255, 188, 150);
+                        margin-bottom: -20px;
+                        padding: 1px 7px;
+                      "
+                      class="btn btn-light"
+                      id="dropdownBasic1"
+                      ngbDropdownToggle
+                    >
+                      <i class="bi bi-person-circle" style="font-size: 20px"></i>
+                    </button>
+                    <div
+                      style="background-color: white"
+                      ngbDropdownMenu
+                      aria-labelledby="dropdownBasic1"
+                    >
+
+                      <button ngbDropdownItem >
+                        <a
+                          style="color: black"
+                          class="nav-link"
+                          href
+                          >Logout
+                        </a>
+                      </button>
+                    </div>
+                  </div>
+              </form>
+          </div>
       </div>
-      <br />
-      <ul class="flex-column mb-auto">
-        <li>
-          <a class="nav-link" [routerLink]="['/maina']" routerLinkActive="active"
-            >Home</a
-          >
-        </li>
-        <br />
-        <li>
-          <a
-            class="nav-link"
-            [routerLink]="['/user']"
-            routerLinkActive="active"
-            >User</a
-          >
-        </li>
-        <br />
-        <li>
-          <a
-            class="nav-link"
-            [routerLink]="['/musica']"
-            routerLinkActive="active"
-            >Full Music</a
-          >
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<div class="btn d-flex justify-content-end">
-  <div ngbDropdown class="d-inline-block">
-    <button
-      style="
-        background-color: rgb(255, 188, 150);
-        margin-bottom: -20px;
-        padding: 1px 7px;
-      "
-      class="btn btn-light"
-      id="dropdownBasic1"
-      ngbDropdownToggle
-    >
-      <i class="bi bi-person-circle" style="font-size: 20px"></i>
-    </button>
-    <div
-      style="background-color: white"
-      ngbDropdownMenu
-      aria-labelledby="dropdownBasic1"
-    >
-
-      <button ngbDropdownItem >
-        <a
-          style="color: black"
-          class="nav-link"
-          href
-
-          >Logout
-        </a>
-      </button>
-    </div>
-  </div>
-</div>
+  </nav>
+</body>
