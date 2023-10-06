@@ -1,1 +1,166 @@
-<p>account works!</p>
+<app-navbara></app-navbara>
+<div class="content">
+  <div>
+    <h2 class="d-flex justify-content-center">User management</h2>
+    <br />
+    <div class="d-flex justify-content-end">
+      <div ngbDropdown class="d-inline-block">
+        <button  type="button" class="btn btn-primary br">
+          Create
+        </button>
+      </div>
+    </div>
+    <br />
+    <div
+      class="form-outline d-flex flex-row"
+      style="margin-left: 50px; margin-right: 950px"
+    >
+      <input id="search-focus" type="search" id="form1" class="form-control" />
+      <button class="p-2" style="border-radius: 5px">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+    <br />
+  </div>
+  <!-- Modal Create -->
+  <div class="bor">
+    <div class="pop">
+      <div class="modal-header">
+        <h1 class="text-align-center center">Create account</h1>
+        <button type="button" class="btn-close" ></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3 row">
+          <label for="input" class="col-sm-2 col-form-label">User Name</label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" id="input" />
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label for="input" class="col-sm-2 col-form-label">Full Name</label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" id="input" />
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label for="input" class="col-sm-2 col-form-label">DOB</label>
+          <div class="col-sm-8">
+            <input type="datetime-local" class="form-control" id="input" />
+            <p style="color: red;">***smore 18 age</p>
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label for="input" class="col-sm-2 col-form-label">Email</label>
+          <div class="col-sm-8">
+            <input type="email" class="form-control" id="input" />
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label for="input" class="col-sm-2 col-form-label">Phone</label>
+          <div class="col-sm-8">
+            <input  type="number" class="form-control" id="input" />
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label for="input" class="col-sm-2 col-form-label">Role</label>
+          <div class="col-sm-8">
+            <select class="form-select" aria-label="Disabled select example">
+              <option selected>Admin</option>
+              <option >Customer</option>
+              <option >Autor</option>
+            </select>
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label for="input" class="col-sm-2 col-form-label">Password</label>
+          <div class="col-sm-8">
+            <input type="password" class="form-control" id="input" />
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">
+          Create
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Profile -->
+  <div class="bor">
+    <div class="pop">
+      <div class="modal-header">
+        <h1 class="text-align-center center">Profile</h1>
+        <button type="button" class="btn-close" ></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3 row">
+          <label for="input" class="col-sm-2 col-form-label">User Name</label>
+          <div class="col-sm-8">
+            <input class="form-control" type="text" disabled />
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label for="input" class="col-sm-2 col-form-label">Full Name</label>
+          <div class="col-sm-8">
+            <input  class="form-control" type="text" disabled />
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label for="input" class="col-sm-2 col-form-label"
+            >Date Of Birth</label
+          >
+          <div class="col-sm-8">
+            <input  class="form-control" type="datetime" disabled />
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label for="input" class="col-sm-2 col-form-label">Email</label>
+          <div class="col-sm-8">
+            <input  class="form-control" type="text" disabled />
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label for="input" class="col-sm-2 col-form-label">Phone</label>
+          <div class="col-sm-8">
+            <input  class="form-control" type="number" disabled />
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label for="input" class="col-sm-2 col-form-label">Role</label>
+          <div class="col-sm-8">
+            <input  class="form-control" type="text" disabled />
+          </div>
+        </div>
+      </div>
+      <br />
+    </div>
+    <br />
+  </div>
+  <!-- Modal delete -->
+  <div class="row justify-content-evenly">
+    <div  class="col-3">
+      <div class="bor">
+        <div class="pop">
+          <div class="modal-header">
+            <h1>Delete Account</h1>
+            <button type="button" class="btn-close" ></button>
+          </div>
+          <div class="modal-body">
+            <p>Are you sure you want to delete your account?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="cancelbtn" style="border-radius: 5px;">Cancel</button>
+            <button type="button" class="deletebtn" style="border-radius: 5px;">Delete</button>
+          </div>
+        </div>
+      </div>
+      <button  class="but" type="button">
+        <i class="bi bi-person-fill"></i>
+      </button>
+      <button style="border-radius: 5px">
+        <i class="bi bi-trash"></i>
+      </button>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

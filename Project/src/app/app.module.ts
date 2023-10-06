@@ -94,6 +94,14 @@ import { NavbarcComponent } from './components/customer/navbarc/navbarc.componen
         path: 'actor',
         component: MaintComponent,
       },
+      {
+        path: 'user',
+        component: AccountComponent,
+      },
+      {
+        path: 'musica',
+        component: MusicComponent,
+      },
     ]),
     NgbModule
   ],
