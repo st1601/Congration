@@ -10,7 +10,6 @@ import { LoginComponent } from './components/default/login/login.component';
 import { RegisterComponent } from './components/default/register/register.component';
 import { PasswordComponent } from './components/default/password/password.component';
 import { SpaperComponent } from './components/customer/spaper/spaper.component';
-import { MusicComponent } from './components/customer/music/music.component';
 import { VideoComponent } from './components/customer/video/video.component';
 import { FavoliteComponent } from './components/customer/favolite/favolite.component';
 import { TopComponent } from './components/customer/top/top.component';
@@ -25,6 +24,9 @@ import { HomeComponent } from './components/home/home.component';
 import { NavbartComponent } from './components/actor/navbart/navbart.component';
 import { NavbaraComponent } from './components/admin/navbara/navbara.component';
 import { NavbarcComponent } from './components/customer/navbarc/navbarc.component';
+import { MusicaComponent } from './components/admin/musica/musica.component';
+import { MusiccComponent } from './components/customer/musicc/musicc.component';
+import { MusictComponent } from './components/actor/musict/musict.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,6 @@ import { NavbarcComponent } from './components/customer/navbarc/navbarc.componen
     RegisterComponent,
     PasswordComponent,
     SpaperComponent,
-    MusicComponent,
     VideoComponent,
     FavoliteComponent,
     TopComponent,
@@ -48,7 +49,10 @@ import { NavbarcComponent } from './components/customer/navbarc/navbarc.componen
     HomeComponent,
     NavbartComponent,
     NavbaraComponent,
-    NavbarcComponent
+    NavbarcComponent,
+    MusicaComponent,
+    MusiccComponent,
+    MusictComponent
   ],
   imports: [
     BrowserModule,
@@ -100,7 +104,7 @@ import { NavbarcComponent } from './components/customer/navbarc/navbarc.componen
       },
       {
         path: 'musica',
-        component: MusicComponent,
+        component: MusicaComponent,
       },
     ]),
     NgbModule
