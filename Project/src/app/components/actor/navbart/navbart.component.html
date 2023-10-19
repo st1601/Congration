@@ -1,14 +1,36 @@
-<div class="row">
-	<div class="col text-end">
-		<div ngbDropdown class="d-inline-block">
-			<button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
-				Toggle dropdown
-			</button>
-			<div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-				<button ngbDropdownItem>Action - 1</button>
-				<button ngbDropdownItem>Another Action</button>
-				<button ngbDropdownItem>Something else is here</button>
-			</div>
-		</div>
-	</div>
+<div class="row text-center">
+  <div class="col-3">
+    <div class="logo">
+      <a>
+        <img src="assets/img/logo.jpg" alt="" style="width: 100px" />
+      </a>
+    </div>
+  </div>
+  <div class="col-7">
+    <ul class="nav" style="margin-top: 15px;">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="maint">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="post">New paper</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="musict">List Music</a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-2">
+    <div class="col text-end" style="margin-top: 15px; margin-right: 50px;">
+      <div ngbDropdown class="d-inline-block">
+        <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+          <i class="bi bi-person-circle"></i>
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem [routerLink]="['/login']">Login</button>
+          <button ngbDropdownItem [routerLink]="['/admina']">Profile</button>
+          <button ngbDropdownItem>Logout</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

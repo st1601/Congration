@@ -3,7 +3,197 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  width: 1700px;
 }
 .content {
   flex-grow: 1;
+}
+body {
+  background:#f0f0f0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+* {
+  box-sizing:border-box;
+}
+
+h2 {
+  text-align:center;
+}
+.bor{
+  display: grid;
+  place-items: center;
+  background-color: rgb(0,0,0,0.5);
+  position: fixed ;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  .pop{
+   width: 50%;
+   min-width: 300px;
+   padding: 16px 16px;
+   border-radius: 4px;
+   background-color: white;
+  }
+ 
+ }
+.container {
+  height:260px;
+  
+  margin:10% auto;
+  position: relative;
+  
+  border-radius:16px;
+  box-shadow:-1px 4px 6px 1px ;
+}
+
+// Where's my remote control?
+.controls {
+  position:absolute;
+  bottom:0;
+  left:0;
+  
+  height:36%;
+  width:100%;
+  
+  background: #fff;
+  border-bottom-left-radius:16px;
+  border-bottom-right-radius:16px;
+  
+  .pause {
+    height:42px;
+    width:42px;
+    
+    float:left;
+    
+    margin-top:34px;
+    margin-left:20px;
+    padding-top:12px;
+    
+    border-radius:50%;
+    
+    transition:0.3s;
+    .pause-icon {
+      height:18px;
+      width:14px;
+      
+      margin:0 auto;
+      
+      border-left:3px solid #fff;
+      border-right:3px solid #fff;
+    }
+  }
+  
+}
+
+// Song title, artist
+.song {
+  float:left;
+  
+  margin:30px 12px;
+  
+  .title {
+    font-size:1.3em;
+  }
+  
+  .artist {
+    font-size:0.8em;
+  }
+}
+.time {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  padding:6px 10px;
+  font-size:0.65em;
+  span:first-child {
+    float:left;
+  }
+  
+  span:last-child {
+    float:right;
+  }
+}
+.cover {
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:3;
+  
+  background:url('http://bobmarley.cdn.junip.com/wp-content/uploads/2013/09/HERO-tourhistory71.jpg');
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:bottom;
+  
+  height:65%;
+  width:100%;
+  border-top-left-radius:16px;
+  border-top-right-radius:16px;
+}
+
+// The pink thing
+.timeline {
+  position:absolute;
+  bottom:-2px;
+  left:0;
+  
+  height:2px;
+  width:40%;
+  z-index:4;
+}
+
+.direction {
+  float:right;
+  margin:40px 18px;
+  
+  .btn {
+    border-radius:50%;
+    width:26px;
+    height:26px;
+    float:left;
+    
+    margin:0 4px;
+    
+    font-size:12px;
+    line-height:26px;
+    text-align: center;
+    vertical-align:top;
+    color:#fff;
+    
+    transition:0.3s;
+    
+    
+    
+    .fa-backward {
+      padding:0 2px 0 0;
+    }
+    
+    .fa-forward {
+      padding:0 0 0 2px;
+    }
+  }
+}
+
+.shuffle  {
+  width:12px;
+  font-size:12px;
+  margin:4px 4px;
+  float:left;
+  
+  transition:0.3s;
+
+  
+  > div {
+    display:block;
+    
+    &:last-child {
+      margin-top:-4px;
+    }
+  }
+  .flip {
+    transform:rotate(180deg);
+  }
+
 }

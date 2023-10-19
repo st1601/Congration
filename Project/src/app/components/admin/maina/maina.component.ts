@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NgbCarouselConfig, NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-maina',
@@ -7,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class MainaComponent {
 
+	constructor(config: NgbCarouselConfig) {
+		config.interval = 10000;
+		config.wrap = false;
+		config.keyboard = false;
+		config.pauseOnHover = false;
+	}
 }

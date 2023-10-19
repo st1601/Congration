@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./musica.component.scss']
 })
 export class MusicaComponent {
-
+  showp: boolean = false;
+  po() {
+    this.showp = !this.showp;
+  }
+  cl() {
+    this.showp = false;
+  }
 }

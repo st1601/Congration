@@ -1,7 +1,81 @@
-<app-navbart></app-navbart>
+
 <div class="contain">
+  <app-navbart></app-navbart>
   <div class="content">
-    <p>maint works!</p>
+    <ngb-carousel>
+      <ng-template ngbSlide>
+        <img
+          src="assets/home-bg-1.jpg"
+          alt="first slide"
+          class="slider-img"
+        />
+        <div class="carousel-caption">
+          <div class="single-homepage-slider">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 col-lg-7 offset-lg-1 offset-xl-0">
+                  <div class="hero-text">
+                    <div class="hero-text-tablecell">
+                      <p class="subtitle">Fresh & Organic</p>
+                      <h1>Delicious Seasonal Fruits</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img
+            src="assets/home-bg-2.jpg"
+            alt="Random second slide"
+            class="slider-img"
+          />
+        </div>
+        <div class="carousel-caption">
+          <div class="single-homepage-slider">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-10 offset-lg-1 text-center">
+                  <div class="hero-text">
+                    <div class="hero-text-tablecell">
+                      <p class="subtitle">Fresh Everyday</p>
+                      <h1>100% Organic Collection</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <img
+          src="assets/home-bg-3.jpg"
+          alt="third slide"
+          class="slider-img"
+        />
+        <div class="carousel-caption">
+          <div class="single-homepage-slider">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-10 offset-lg-1 text-right">
+                  <div class="hero-text">
+                    <div class="hero-text-tablecell">
+                      <p class="subtitle">Mega Sale Going On!</p>
+                      <h1>Get December Discount</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </ngb-carousel>
   </div>
+  <app-footer></app-footer>
 </div>
-<app-footer></app-footer>
+
