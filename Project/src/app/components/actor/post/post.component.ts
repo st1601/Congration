@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./post.component.scss']
 })
 export class PostComponent {
-
+  showc: boolean = false;
+  cr() {
+    this.showc = !this.showc;
+  }
+  cl() {
+    this.showc = false;
+  }
+  save() {
+  }
 }

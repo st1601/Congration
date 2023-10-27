@@ -9,9 +9,7 @@ import { LoginComponent } from './components/default/login/login.component';
 import { RegisterComponent } from './components/default/register/register.component';
 import { PasswordComponent } from './components/default/password/password.component';
 import { SpaperComponent } from './components/customer/spaper/spaper.component';
-import { VideoComponent } from './components/customer/video/video.component';
 import { FavoliteComponent } from './components/customer/favolite/favolite.component';
-import { TopComponent } from './components/customer/top/top.component';
 import { AccountComponent } from './components/admin/account/account.component';
 import { PostComponent } from './components/actor/post/post.component';
 import { MaintComponent } from './components/actor/maint/maint.component';
@@ -27,6 +25,10 @@ import { MusiccComponent } from './components/customer/musicc/musicc.component';
 import { MusictComponent } from './components/actor/musict/musict.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProfileaComponent } from './components/admin/profilea/profilea.component';
+import { ProfiletComponent } from './components/actor/profilet/profilet.component';
+import { ProfilecComponent } from './components/customer/profilec/profilec.component';
+import { SingleComponent } from './components/customer/single/single.component';
+import { AsingleComponent } from './components/customer/asingle/asingle.component';
 
 @NgModule({
   declarations: [
@@ -36,9 +38,7 @@ import { ProfileaComponent } from './components/admin/profilea/profilea.componen
     RegisterComponent,
     PasswordComponent,
     SpaperComponent,
-    VideoComponent,
     FavoliteComponent,
-    TopComponent,
     AccountComponent,
     PostComponent,
     MaintComponent,
@@ -51,7 +51,11 @@ import { ProfileaComponent } from './components/admin/profilea/profilea.componen
     MusicaComponent,
     MusiccComponent,
     MusictComponent,
-    ProfileaComponent
+    ProfileaComponent,
+    ProfiletComponent,
+    ProfilecComponent,
+    SingleComponent,
+    AsingleComponent
   ],
   imports: [
     BrowserModule,
@@ -114,12 +118,40 @@ import { ProfileaComponent } from './components/admin/profilea/profilea.componen
         component: MusictComponent,
       },
       {
+        path: 'musicc',
+        component: MusiccComponent,
+      },
+      {
         path: 'adminp',
         component: ProfileaComponent,
       },
       {
+        path: 'actort',
+        component: ProfiletComponent,
+      },
+      {
+        path: 'customerc',
+        component: ProfilecComponent,
+      },
+      {
         path: 'post',
         component: PostComponent,
+      },
+      {
+        path: 'paper',
+        component: SpaperComponent,
+      },
+      {
+        path: 'favolite',
+        component: FavoliteComponent,
+      },
+      {
+        path: 'single',
+        component: SingleComponent,
+      },
+      {
+        path: 'asong',
+        component: AsingleComponent,
       },
     ]),
     NgbModule,

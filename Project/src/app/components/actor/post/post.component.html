@@ -1,1 +1,98 @@
-<p>post works!</p>
+
+<div class="contain">
+  <app-navbart></app-navbart>
+  <div class="content">
+    <div class="row justify-content-evenly">
+      <br />
+      <h2 class="d-flex justify-content-center">List Paper</h2>
+      <br />
+      <div class="d-flex justify-content-end">
+        <div ngbDropdown class="d-inline-block">
+          <button (click)="cr()" type="button" class="btn btn-primary br">
+            Create
+          </button>
+        </div>
+      </div>
+      <br /><div class="row">
+        <br/>
+        <h3 style="margin-left: 250px;">Le Luu Ly</h3>
+        <br/>
+        <div class="col-3">
+          <img src="https://i.ytimg.com/vi/rT30VcpAjG4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCQxsesQzH4G9ibhjklxqLMdjHjBg" style="width: 400px; height: 200px; border-radius: 20px;" >
+        </div>
+        <div class="col-9">
+          <br>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+            ex metus, sagittis at mattis ut, commodo eu dolor. Aenean facilisis
+            mauris at iaculis commodo. Nam congue massa lorem, in condimentum
+            mauris porttitor sit amet. Aenean imperdiet luctus semper. Nulla
+            cursus lacus leo, ac commodo elit condimentum eu. Mauris ornare
+            maximus nibh, vel sollicitudin risus consequat sed. Etiam ultrices
+            id nisl ut sollicitudin. Integer luctus rhoncus sem et imperdiet.
+            Vestibulum commodo lacus ac neque iaculis, non ullamcorper dui
+            lobortis. Suspendisse non risus quam. Integer nec mi semper,
+            malesuada lacus vel, pellentesque ligula. Nunc ultrices fringilla
+            dignissim.</p>
+        </div>
+      </div>
+      <div class="row">
+        <br/>
+        <h3 style="margin-left: 250px;">Ban Doi</h3>
+        <br/>
+        <div class="col-9">
+          <br>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+            ex metus, sagittis at mattis ut, commodo eu dolor. Aenean facilisis
+            mauris at iaculis commodo. Nam congue massa lorem, in condimentum
+            mauris porttitor sit amet. Aenean imperdiet luctus semper. Nulla
+            cursus lacus leo, ac commodo elit condimentum eu. Mauris ornare
+            maximus nibh, vel sollicitudin risus consequat sed. Etiam ultrices
+            id nisl ut sollicitudin. Integer luctus rhoncus sem et imperdiet.
+            Vestibulum commodo lacus ac neque iaculis, non ullamcorper dui
+            lobortis. Suspendisse non risus quam. Integer nec mi semper,
+            malesuada lacus vel, pellentesque ligula. Nunc ultrices fringilla
+            dignissim.</p>
+        </div>
+        <div class="col-3">
+          <img src="https://i.ytimg.com/vi/h7cOOfpdEfk/sddefault.jpg?v=651d461d" style="width: 400px; height: 200px; border-radius: 20px;" >
+        </div>
+        <br/>
+      </div>
+      <br/>
+    </div></div>
+  <!-- Modal Create -->
+  <div *ngIf="showc" class="bor">
+    <div class="pop">
+      <div class="modal-header">
+        <h1 class="text-align-center center">Create paper</h1>
+        <button type="button" class="btn-close" (click)="cl()"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3 row">
+          <label for="input" class="col-sm-2 col-form-label">Music Name</label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" id="input" />
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label for="input" class="col-sm-2 col-form-label">Tirtle</label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" id="input" />
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label for="input" class="col-sm-2 col-form-label">Image</label>
+          <div class="col-sm-8">
+            <input type="file" id="file-upload" required />
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button (click)="save()" type="button" class="btn btn-primary">
+          Create
+        </button>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

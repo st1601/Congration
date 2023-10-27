@@ -1,0 +1,10 @@
+.contain {
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 1700px;
+}
+.content {
+  flex-grow: 1;
+}
