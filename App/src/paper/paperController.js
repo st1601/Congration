@@ -3,7 +3,7 @@ const session = require('express-session');
 
 const app = express()
 
-const { insertPaper, deletePaper, getDB} = require('./databasePaper');
+const { insertPaper, deletePaper} = require('./databasePaper');
 
 app.set('view engine', 'hbs')
 app.use(express.urlencoded({ extended: true }))
