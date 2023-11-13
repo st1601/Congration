@@ -22,4 +22,40 @@ async function insertUser(newUser) {
     await dbo.collection("users").insertOne(newUser);
 }
 
-module.exports = {getDB,insertUser,getRole}
+//Paper
+
+async function insertPaper(newPaper) {
+    const dbo = await getDB();
+    await dbo.collection("Papers").insertOne(newPaper);
+}
+
+async function getPaperById(id) {
+    const dbo = await getDB();
+    const p = await dbo.collection("papers").findOne({ _id: ObjectId(id) });
+    return p;
+}
+
+async function deletePaper(id) {
+    const dbo = await getDB();
+    await dbo.collection("papers").deleteOne({ "_id": ObjectId(id) });
+}
+
+//Music
+
+async function insertMusic(newMusic) {
+    const dbo = await getDB();
+    await dbo.collection("Musics").insertOne(newMusic);
+}
+
+async function getMusicById(id) {
+    const dbo = await getDB();
+    const p = await dbo.collection("musics").findOne({ _id: ObjectId(id) });
+    return p;
+}
+
+async function deleteMusic(id) {
+    const dbo = await getDB();
+    await dbo.collection("musics").deleteOne({ "_id": ObjectId(id) });
+}
+
+module.exports = {getDB,insertUser,getRole,insertPaper,getPaperById,deletePaper,insertMusic,getMusicById,deleteMusic}

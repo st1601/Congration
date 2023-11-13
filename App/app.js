@@ -6,7 +6,9 @@ const app = express()
 // const cors = require('cors');
 // mongoose.connect("mongodb://localhost:27017/Congration");
 
-const { insertUser,getRole } = require('./databaseHandler');
+const { insertUser,getRole,insertMusic, deleteMusic, insertPaper, deletePaper} = require('./databaseHandler');
+
+const bodyParser = require('body-parser');
 
 app.set('view', 'hbs')
 app.use(express.urlencoded({ extended: true }))
@@ -31,9 +33,17 @@ app.post('/register',async (req,res)=>{
     res.redirect('/login')
 })
 
+
+// Middleware for parsing JSON requests
+app.use(bodyParser.json());
+
+//Users
+
+
 // Login
+
 app.get('/login',(req,res)=>{
-    res.render('login')
+    res.send
 })
 app.post('/doLogin',async (req,res)=>{
     const name = req.body.txtName;
@@ -60,6 +70,71 @@ app.get('/noLogin',checkLogin,(req,res)=>{
     res.render('noLogin')
 })
 
+//Paper
+app.post('/insertp', async (req, res) => {
+    const nameInput = req.body.txtName;
+    const tirtleInput = req.body.txtTirtle;
+    const pictureInput = req.body.txtPicture;
+    if(nameInput.length <4){
+        res.render("index",{errorMsg:'Ten nho hon 4 ky tu'})
+        return;
+    }
+    const newPaper = { name: nameInput, tirtle: tirtleInput, picture: pictureInput }
+    insertPaper(newPaper);
+    res.redirect("");
+})
+
+app.get('/deletep', async (req, res) => {
+    const id = req.query.id;
+
+    await deletePaper(id);
+    res.redirect("/");
+})
+
+app.post('/searchs', async (req, res) => {
+    const searchInput = req.body.txtSearch;
+    const dbo = await getDB()
+    const allPapers = await dbo.collection("papers").find({ name: searchInput }).toArray();
+
+    res.render('index', { data: allPapers })
+})
+
+//Music
+
+app.post('/insertm', async (req, res) => {
+    const nameInput = req.body.txtName;
+    const tirtleInput = req.body.txtTirtle;
+    const pictureInput = req.body.txtPicture;
+    if(nameInput.length <4){
+        res.render("index",{errorMsg:'Ten nho hon 4 ky tu'})
+        return;
+    }
+    const newMusic = { name: nameInput, tirtle: tirtleInput, picture: pictureInput }
+    insertMusic(newMusic);
+})
+
+app.get('/editm', async (req, res) => {
+    const id = req.query.id;
+
+    const s = await getMusicById(id);
+    res.render("editm", { music: m });
+})
+
+app.get('/deletem', async (req, res) => {
+    const id = req.query.id;
+
+    await deleteMusic(id);
+    res.redirect("/");
+})
+
+app.post('/searchm', async (req, res) => {
+    const searchInput = req.body.txtSearch;
+    const dbo = await getDB()
+    const allMusic = await dbo.collection("musics").find({ name: searchInput }).toArray();
+
+    res.render('index', { data: allMusics })
+})
+
 function checkLogin(req,res,next){
     if(req.session["User"] == null){
         res.redirect('/login')
@@ -68,6 +143,8 @@ function checkLogin(req,res,next){
     }
 }
 
+
 const PORT = process.env.PORT || 5001;
-app.listen(PORT)
-console.log("app is running ", PORT)
+app.listen(PORT, () => {
+    console.log(`Server is listening on port ${PORT}`);
+  });
